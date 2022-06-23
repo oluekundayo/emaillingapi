@@ -18,17 +18,20 @@ const createControl = async (req, res, next) => {
   const {
     subject,
     description
-  } = req.body;
+  } = req.body[0];
   const insertObj = {
     subject,
     description
   };
 
+  console.log(req.body[0])
+
       let insertUserData = await emailService.sendMail(
-        "ekundayoolumide1@gmail.com",
-        insertObj
+        "opecopec27@gmail.com",
+        insertObj.subject,
+        insertObj.description
       );
-      if (insertUserData) goodJsonWithRes({ message: `User created!!` }, 201);
+      if (insertUserData) goodJsonWithRes({ message: `Processing!!` }, 201);
       else badJsonWithRes("Unable to create the User account");
     // }
   

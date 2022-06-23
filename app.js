@@ -79,4 +79,4 @@ app.use(function(req, res, next) {
 
   var port = process.env.PORT || '3000';
 
-app.listen(port)
+  app.listen(port, () => console.log(`Server live on http://localhost:${port}`))
