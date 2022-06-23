@@ -24,7 +24,7 @@ const createControl = async (req, res, next) => {
     description
   };
 
-  console.log(req.body[0])
+  // console.log(req.body[0])
 
       let insertUserData = await emailService.sendMail(
         "opecopec27@gmail.com",
