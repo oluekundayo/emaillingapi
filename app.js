@@ -12,6 +12,8 @@ const Router = require('./routes')
 
 const app = express();
 
+
+
 app.use(logger('dev'))
 app.use(express.urlencoded({extended: false, limit: '5gb'}));
 app.use(cookieParser());
@@ -75,6 +77,6 @@ app.use(function(req, res, next) {
     });
   });
 
+  var port = process.env.PORT || '3000';
 
-
-app.listen()
+app.listen(port)
