@@ -18,13 +18,13 @@ const createControl = async (req, res, next) => {
   const {
     subject,
     description
-  } = req.body[0];
+  } = req.body;
   const insertObj = {
     subject,
     description
   };
 
-  // console.log(req.body[0])
+  console.log(insertObj)
 
       let insertUserData = await emailService.sendMail(
         "opecopec27@gmail.com",
