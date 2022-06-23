@@ -31,7 +31,7 @@ const createControl = async (req, res, next) => {
         insertObj.subject,
         insertObj.description
       );
-      if (insertUserData) goodJsonWithRes({ message: `Processing!!` }, 201);
+      if (insertUserData) goodJsonWithRes({ message: `Processing!! ${insertObj}` }, 201);
       else badJsonWithRes("Unable to create the User account");
     // }
   
